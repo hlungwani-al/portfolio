@@ -1,0 +1,35 @@
+.footer {
+    background: var(--green-theme-nav-background-color);
+    color: var(--green-theme-main-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  
+    .footer-container {
+      max-width: 150px;
+      margin: 0 auto;
+      padding: 0 20px;
+  
+      .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+  
+        a {
+          color: white;
+          font-size: 20px;
+          text-decoration: none;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color:var(--green-theme-main-color);
+          }
+        }
+      }
+    }
+  }
+  

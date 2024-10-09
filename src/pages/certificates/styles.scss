@@ -1,0 +1,113 @@
+.cv{
+    height: 100%;
+}
+
+.timeline{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+
+    &-schoolEducation, &-outsideEducation{
+        width: 50%;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-header{
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--green-theme-sub-text-color);
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            text-transform: uppercase;
+            padding: 8px 10px;
+            border-bottom: 2px solid var(--green-theme-main-color);
+        }
+
+        &-header::before , &-header::after{
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 5px;
+            background-color: var(--green-theme-main-color);
+            bottom: -1px;
+        }
+
+        &-header::before{
+            left: 0;
+        }
+
+        &-header::after{
+            right: 0;
+        }
+
+        &-vertical-timeline-element{
+            padding: 0px 0px 30px 0px;
+
+            &:last-child{
+                padding-bottom: 0px;
+            }
+        }
+        .vertical-timeline-element-title-wrapper{
+            display: flex;
+            align-items: center;
+
+            .degree-list {
+                list-style-type:none;    
+                padding-left: 25px;       
+                margin-bottom: 5px;      
+                font-weight: normal;      
+                font-size: 18px;          
+                line-height: 1.8;
+            } 
+            .degree-list li::before {
+                            content: "➤";
+                            color: rgb(255, 255, 255);
+                            display: inline-block;
+                            width: 1em;
+                            margin-left: -1em;
+                            margin-right: 0.5em;
+                        }
+
+            h3,h4{
+                font-size: 18px;
+            }
+
+        }
+
+        .vertical-timeline-element-title-wrapper-description{
+            font-size: 20px;
+        }
+
+        .vertical-timeline-element-content{
+            box-shadow: none;
+        }
+
+        .vertical-timeline-element-content-arrow{
+            display: none;
+        }
+
+        .vertical-timeline-element-date{
+            opacity: 1;
+            color: var(--green-theme-sub-text-color);
+            font-size: 18px;
+            font-weight: normal;
+        }
+    }
+}
+
+@media only screen and (max-width : 768px){
+    .timeline{
+        flex-direction: column;
+        &-outsideEducation, &-schoolEducation{
+            width: 100%;
+            gap: 2rem;
+        }
+    }
+    
+    
+}

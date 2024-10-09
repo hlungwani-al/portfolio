@@ -1,0 +1,114 @@
+.home {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.home-text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+
+    h1 {
+        color: var(--green-theme-main-color);
+        margin: 0px;
+        font-weight: 500;
+        font-size: 8rem;
+        line-height: 10rem;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typingEffectAnimation 3s steps(30, end);
+    }
+}
+
+.home-contact-me-about {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+
+    button {
+        cursor: pointer;
+        padding: 10px 10px;
+        font-size: 2rem;
+        margin-left: 18px;
+        background: transparent;       
+        color: var(--green-theme-main-color);
+        border: 1.5px solid var(--green-theme-main-color);
+        border-radius: 4px;
+        font-weight: 500;
+        animation: button-pop-in 3s linear, border-color-shift 4s infinite;;
+
+        &:hover {
+            background-color: var(--green-theme-main-color);
+            color: black;
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .home-text-wrapper h1{
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+    .home-text-wrapper h1{
+        font-size: 4rem;
+        line-height: 6rem;
+    }    
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+    .home-text-wrapper h1{
+        font-size: 6rem;
+        line-height: 8rem;
+    } 
+}
+
+@keyframes typingEffectAnimation {
+    from {
+       width:0; 
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes button-pop-in {
+    0% {
+        transform: translateY(50px);
+        opacity: 0; /* Make the button invisible when it's below its initial position */
+      }
+      50% {
+        transform: translateY(0); /* Move the button to its initial position */
+        opacity: 1; /* Make the button visible again */
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+        transform: scale(1.01); /* Scale the button to 110% of its original size */
+      }
+}
+@keyframes border-color-shift {
+    0% {
+        border-color: #228B22; /* Forest Green */
+    }
+    25% {
+        border-color: #32CD32; /* Lime Green */
+    }
+    50% {
+        border-color: #00FF7F; /* Spring Green */
+    }
+    75% {
+        border-color: #7FFF00; /* Chartreuse */
+    }
+    100% {
+        border-color: #228B22; /* Forest Green */
+    }
+}
